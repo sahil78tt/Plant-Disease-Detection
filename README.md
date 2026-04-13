@@ -196,7 +196,7 @@ plant-disease-detection/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/plant-disease-detection.git
+git clone https://github.com/sahil78tt/Plant-Disease-Detection.git
 cd plant-disease-detection
 ```
 
