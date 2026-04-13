@@ -1,35 +1,112 @@
-# 🌿 Plant Disease Detection using Transfer Learning
+<p align="center">
+  <img src="https://img.icons8.com/color/512/plant-under-sun.png" alt="Plant Disease Detection Logo" width="140" />
+</p>
 
-An **AI-powered system** that detects diseases in plant leaves using **Transfer Learning with MobileNet**.  
-Upload a plant leaf image and get **instant disease predictions**, **confidence scores**, and **remedy suggestions**.
+<h1 align="center">Plant Disease Detection</h1>
+
+<p align="center">
+<strong>AI-powered plant leaf disease detection using Deep Learning and Transfer Learning</strong>
+</p>
+
+<p align="center">
+Upload a plant leaf image and get instant disease predictions, confidence scores, and remedy suggestions through a modern AI-powered web application.
+</p>
+
+<p align="center">
+<a href="#features">Features</a> •
+<a href="#screenshots">Screenshots</a> •
+<a href="#installation">Installation</a> •
+<a href="#tech-stack">Tech Stack</a> •
+<a href="#dataset">Dataset</a>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/TensorFlow-DeepLearning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+<img src="https://img.shields.io/badge/Keras-NeuralNetworks-D00000?style=for-the-badge&logo=keras&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-WebApp-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/MobileNet-TransferLearning-4CAF50?style=for-the-badge"/>
+</p>
 
 ---
 
-# 📌 Project Overview
+# Why This Project?
 
-Plant diseases significantly affect crop yield and food production. This project provides an **automated plant disease detection system** using **Deep Learning and Computer Vision**.
+Plant diseases significantly impact agricultural productivity. Early detection can help farmers prevent crop losses.
 
-The model uses **Transfer Learning**, where a model trained on **ImageNet** is reused for plant disease classification.
+This project uses **Computer Vision and Deep Learning** to automatically identify plant diseases from leaf images.
 
-The application allows users to upload a plant leaf image through a **Streamlit web interface** and receive disease predictions.
+The system uses **Transfer Learning with MobileNet**, a lightweight convolutional neural network trained on ImageNet.
 
----
+Users can upload a leaf image through a **Streamlit web interface** and receive:
 
-# 🧠 Technologies Used
-
-- Python
-- TensorFlow / Keras
-- MobileNet (Transfer Learning)
-- Streamlit
-- NumPy
-- Matplotlib
-- Pillow
+- Disease prediction
+- Confidence score
+- Disease description
+- Suggested remedies
 
 ---
 
-# 🌱 Supported Plants & Diseases
+# Features
 
-| Plant       | Diseases Detected                                             |
+<table>
+<tr>
+<td width="50%">
+
+### AI Disease Detection
+
+Detect plant diseases from leaf images using a deep learning model.
+
+</td>
+<td width="50%">
+
+### Instant Predictions
+
+Upload an image and get results within seconds.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+### Confidence Visualization
+
+Prediction confidence chart for all detected classes.
+
+</td>
+<td>
+
+### Remedy Suggestions
+
+Get disease descriptions and treatment recommendations.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+### Modern Web Interface
+
+Interactive UI built with Streamlit.
+
+</td>
+<td>
+
+### Transfer Learning
+
+Uses MobileNet pretrained on ImageNet.
+
+</td>
+</tr>
+</table>
+
+---
+
+# Supported Plants & Diseases
+
+| Plant       | Diseases                                                      |
 | ----------- | ------------------------------------------------------------- |
 | Tomato      | Bacterial Spot, Early Blight, Late Blight, Leaf Mold, Healthy |
 | Potato      | Early Blight, Late Blight, Healthy                            |
@@ -39,68 +116,99 @@ Total Classes: **10**
 
 ---
 
-# 📁 Project Structure
+# Tech Stack
+
+### Machine Learning
+
+```
+TensorFlow
+Keras
+MobileNet
+Transfer Learning
+```
+
+### Backend / Processing
+
+```
+Python
+NumPy
+OpenCV
+Pillow
+Matplotlib
+```
+
+### Web Application
+
+```
+Streamlit
+```
+
+---
+
+# Architecture
+
+```
+User uploads leaf image
+        │
+        ▼
+Streamlit Web Interface
+        │
+        ▼
+Image Preprocessing
+        │
+        ▼
+Deep Learning Model (MobileNet)
+        │
+        ▼
+Prediction + Confidence Score
+        │
+        ▼
+Disease Information + Remedies
+```
+
+---
+
+# Project Structure
 
 ```
 plant-disease-detection/
 │
-├── dataset/                     # Plant disease image dataset
+├── dataset/                # Plant disease images
 │
-├── models/                      # Saved trained models
+├── models/                 # Trained models
 │   ├── plant_disease_model.h5
 │   ├── class_indices.json
 │   └── training_history.png
 │
-├── train_model.py               # Model training script
-├── predict.py                   # Command line prediction script
-├── app.py                       # Streamlit web application
-├── utils.py                     # Utility functions and constants
-├── requirements.txt             # Python dependencies
-└── README.md                    # Project documentation
+├── app.py                  # Streamlit web application
+├── train_model.py          # Model training script
+├── predict.py              # CLI prediction script
+├── utils.py                # Utility functions
+│
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+# Installation
 
-## 1️⃣ Prerequisites
-
-- Python **3.10 / 3.11 / 3.12**
-- VS Code (or any editor)
-- Minimum **4GB RAM** (8GB recommended)
-- At least **2GB free disk space**
-
-Download Python from:
-
-https://www.python.org/downloads/
-
-Verify installation:
+Clone the repository
 
 ```bash
-python --version
+git clone https://github.com/yourusername/plant-disease-detection.git
+cd plant-disease-detection
 ```
 
 ---
 
-# 🖥️ Setup Project
-
-### 1. Open Project in VS Code
-
-```bash
-code plant-disease-detection
-```
-
----
-
-### 2. Create Virtual Environment
-
-Open terminal in the project folder.
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate the environment.
+Activate environment
 
 **Windows**
 
@@ -116,24 +224,24 @@ source venv/bin/activate
 
 ---
 
-### 3. Install Dependencies
+## Install Dependencies
 
 ```bash
-pip install --upgrade pip setuptools wheel
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 ---
 
-# 📊 Dataset Setup
+# Dataset
 
-## Option 1: PlantVillage Dataset (Recommended)
+This project uses the **PlantVillage Dataset**.
 
-Download dataset from Kaggle:
+Download from Kaggle
 
 https://www.kaggle.com/datasets/emmarex/plantdisease
 
-Extract and copy the following folders into the `dataset/` directory:
+Extract the following folders inside `dataset/`
 
 ```
 Pepper__bell___Bacterial_spot
@@ -150,82 +258,47 @@ Tomato_healthy
 
 ---
 
-## Option 2: Generate Sample Dataset
+# Train the Model
 
-For quick testing you can generate synthetic images:
-
-```bash
-python train_model.py --create-sample
-```
-
----
-
-# 🧪 Model Training
-
-Train the model using the dataset.
+Train using real dataset
 
 ```bash
 python train_model.py
 ```
 
-For quick testing:
+Quick test using synthetic dataset
 
 ```bash
 python train_model.py --create-sample
 ```
 
-Example output:
-
-```
-============================================================
-   PLANT DISEASE DETECTION - MODEL TRAINING
-============================================================
-
-Epoch 1/10
-loss: 2.30 - accuracy: 0.15 - val_accuracy: 0.17
-
-Epoch 10/10
-loss: 0.52 - accuracy: 0.85 - val_accuracy: 0.78
-
-TRAINING COMPLETE
-Best Validation Accuracy: 78%
-```
-
 ---
 
-# 🌐 Run the Web Application
+# Run the Web Application
 
-Start the Streamlit application:
+Start the Streamlit app
 
 ```bash
 streamlit run app.py
 ```
 
-Open in browser:
+Open browser
 
 ```
 http://localhost:8501
 ```
 
-### Features
-
-- Upload plant leaf image
-- Detect disease instantly
-- View prediction confidence
-- Display remedy suggestions
-- Confidence chart visualization
-
 ---
 
-# 🖥️ Command Line Prediction
+# Command Line Prediction
 
-Predict disease from an image using terminal.
+Predict disease from terminal
 
 ```bash
 python predict.py path/to/image.jpg
 ```
 
-Or auto-detect a sample image:
+Or auto test
 
 ```bash
 python predict.py
@@ -233,79 +306,43 @@ python predict.py
 
 ---
 
-# 🛠️ Troubleshooting
+# Troubleshooting
 
-## Module Not Found Error
+### TensorFlow Installation Error
 
-```bash
-pip install --upgrade pip setuptools wheel
-pip install -r requirements.txt
 ```
-
----
-
-## Model Not Found
-
-Run training first:
-
-```bash
-python train_model.py --create-sample
-```
-
----
-
-## TensorFlow Installation Error
-
-```bash
 pip install tensorflow
 ```
 
----
+### Model Not Found
 
-## Streamlit Not Opening
-
-Open manually in browser:
+Train the model first
 
 ```
-http://localhost:8501
+python train_model.py --create-sample
 ```
 
----
+### Virtual Environment Issue
 
-## Out of Memory Error
-
-Reduce batch size in `utils.py`
-
-```python
-BATCH_SIZE = 8
 ```
-
----
-
-## PowerShell Virtual Environment Issue
-
-Run:
-
-```bash
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 venv\Scripts\activate
 ```
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
-- Add more plant species (Corn, Apple, Grape)
-- Fine-tune MobileNet layers for higher accuracy
-- Experiment with EfficientNet / ResNet
+- Add more plant species
+- Improve model accuracy
 - Add Grad-CAM visualization
-- Deploy as a mobile app using TensorFlow Lite
-- Create REST API using FastAPI
-- Add Docker support for deployment
+- Deploy using Docker
+- Mobile app using TensorFlow Lite
+- REST API using FastAPI
 
 ---
 
-# 📚 References
+# References
 
 PlantVillage Dataset  
 https://www.kaggle.com/datasets/emmarex/plantdisease
@@ -321,7 +358,14 @@ https://docs.streamlit.io
 
 ---
 
-# 👨‍💻 Author
+# Author
 
-University AI Project  
-Built using **Python, TensorFlow, and Streamlit**
+Sahil Vishwakarma
+
+Built with **Python, TensorFlow, and Streamlit**
+
+---
+
+<p align="center">
+© 2026 Sahil Vishwakarma
+</p>
